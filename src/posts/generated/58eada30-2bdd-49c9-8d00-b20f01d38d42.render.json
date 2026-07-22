@@ -1,0 +1,58 @@
+{
+  "id": "58eada30-2bdd-49c9-8d00-b20f01d38d42",
+  "headline": "Reliability compounds downward",
+  "eyebrow": "compounding-cascade",
+  "visualization": {
+    "kind": "pipeline",
+    "caption": "99% per step → 81.8% after 20",
+    "nodes": [
+      {
+        "step": 1,
+        "cumulative": "99.0%"
+      },
+      {
+        "step": 5,
+        "cumulative": "95.1%"
+      },
+      {
+        "step": 10,
+        "cumulative": "90.4%"
+      },
+      {
+        "step": 15,
+        "cumulative": "86.0%"
+      },
+      {
+        "step": 20,
+        "cumulative": "81.8%"
+      }
+    ],
+    "perStepLabel": "99% per step",
+    "endLabel": "81.8%",
+    "endAccent": "burnt"
+  },
+  "metrics": [
+    {
+      "label": "steps",
+      "value": "20",
+      "accent": "cyan"
+    },
+    {
+      "label": "per-step reliability",
+      "value": "99%",
+      "accent": "cyan"
+    },
+    {
+      "label": "end-to-end reliability",
+      "value": "81.8%",
+      "accent": "burnt"
+    },
+    {
+      "label": "drop",
+      "value": "17.2pp",
+      "accent": "amber"
+    }
+  ],
+  "takeaway": "High per-step reliability doesn't guarantee system reliability.",
+  "signal": "Compounding risk erodes confidence fast"
+}

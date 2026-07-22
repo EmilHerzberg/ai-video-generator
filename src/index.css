@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+  body {
+    font-family: theme("fontFamily.body");
+    color: theme("colors.text-primary");
+    background-color: theme("colors.bg-deep-ink");
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: theme("fontFamily.display");
+    letter-spacing: -0.015em;
+  }
+
+  /* Product-UI readability. The video (MP4 render + QA Preview #post-canvas) uses the raw design tokens
+     verbatim — nothing here may change what the inspector measures. So this is scoped to .app-shell (the
+     product app only, see main.tsx): lift the two DIM text roles a notch for legibility on smaller
+     screens. tertiary #8D93A1 → #A6ABB8, secondary #B8B2A7 → #C8C3BA. Tokens themselves are untouched. */
+  .app-shell {
+    display: contents;
+  }
+  .app-shell .text-text-tertiary {
+    color: #a6abb8;
+  }
+  .app-shell .text-text-secondary {
+    color: #c8c3ba;
+  }
+}
+
+@layer components {
+  /* Slim, brand-toned horizontal scrollbar for chip rows (Gallery jump bar). Keeps the drag
+     affordance but drops the chunky native chrome: hairline thumb, transparent track. */
+  .chip-scroll {
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: rgba(89, 216, 230, 0.35) transparent;
+  }
+  .chip-scroll::-webkit-scrollbar {
+    height: 4px;
+  }
+  .chip-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .chip-scroll::-webkit-scrollbar-thumb {
+    background: rgba(89, 216, 230, 0.35);
+    border-radius: 9999px;
+  }
+  .chip-scroll::-webkit-scrollbar-thumb:hover {
+    background: rgba(89, 216, 230, 0.6);
+  }
+}

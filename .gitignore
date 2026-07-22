@@ -1,0 +1,24 @@
+node_modules
+dist
+dist-ssr
+.DS_Store
+*.local
+.vite
+out
+.remotion
+.env
+.env.*
+!.env.example
+*.tsbuildinfo
+*.mp4
+# …except the small web-optimized landing-page example clips, which are product assets
+!public/examples/*.mp4
+
+# Secrets / credentials / access docs — never commit
+service-account*.json
+*-credentials.json
+gcp-*.json
+Contabo-server.md
+*.pem
+*_rsa
+*_ed25519

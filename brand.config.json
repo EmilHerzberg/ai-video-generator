@@ -1,0 +1,8 @@
+{
+  "$comment": "Brand identity values injected into the AI briefing bundle (context/). Replace these with your own to re-skin the whole system. Token names match context/manifest.json placeholders.",
+  "BRAND_NAME": "Emil Herzberg",
+  "BRAND_MONOGRAM": "EH",
+  "BRAND_SUBTITLE": "AI Systems · Automation · Design",
+  "BRAND_SIGNATURE": "EH / AI SYSTEMS",
+  "BRAND_EMAIL": "you@example.com"
+}
